@@ -32,6 +32,7 @@
     width: 40px;
     border-top: 1px solid #fff;
     vertical-align: middle;
+    *margin-top:22px;/*只ie7生效*/
 }
 
 .index-banner-text  .text-info .txt {
@@ -56,7 +57,7 @@
     background: #f34949;
 }
 
-.index-menu .menu-tips:after {
+.index-menu .menu-tips::after {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -66,4 +67,182 @@
     border-left: 78px solid transparent;
     border-right: 78px solid transparent;
     border-bottom: 10px solid #fff;
+}
+
+.index-menu .menu-list {
+    margin-top: 80px;
+    color:#555;
+    overflow: hidden;
+}
+
+.index-menu .menu-list ul {
+    width: 1212px;/*应该为1100px，但是menu-item有个margin-right多出112ox，
+    不能在同一行，所以多加112px，父元素有个overflow：hidden把多出的部分隐藏*/
+}
+
+.index-menu .menu-item {
+    float: left;
+    width: 494px;
+    margin-right: 112px;
+    margin-bottom: 56px;
+}
+
+.index-menu .menu-item .title , .index-menu .menu-item .line{
+    float: left;
+}
+
+.index-menu .menu-item .price {
+    float: right;
+}
+
+.index-menu .menu-item .title {
+    width: 230px;
+    color:#555;
+    font-size: 16px;
+}
+.index-menu .menu-item h4{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;/*超出部分"..."显示*/
+}
+
+.index-menu .menu-item .comment {
+    margin-top: 4px;
+    color: #b7b7b7;
+    font-size: 14px;
+}
+
+.index-menu .menu-item .line{
+    margin-top: 10px;
+    width: 192px;
+    border-top: 1px solid #e3e1e1;
+}
+
+.index-menu .index-show-more {
+    margin: 0 auto;
+    width: 114px;
+    height: 34px;
+    border: 1px solid #d7d5d5;
+    padding-left: 16px;
+    line-height: 34px; 
+    font-size: 14px;
+    color: #b7b7b7;
+}
+
+.index-menu .index-show-more .icon {
+    display: inline-block;
+    margin-left: 12px;
+    width: 11px;
+    height: 7px;
+    background: url(../images/icon.png);
+}
+
+/*panel*/
+.index-panel {
+    margin-top: 200px;
+}
+
+.index-panel .index-panel-header h3 {
+    float: left;
+    font-size: 20px;
+    margin-right: 50px;
+    color: #626262;
+}
+
+.index-panel-header .line {
+    float: left;
+    margin-top: 13px;
+    width: 200px;
+    height: 0;
+    border-top: 2px solid #e5e3e3;
+}
+
+.index-panel-header .btn {
+    float: right;
+    font-size: 0;/*清楚inline-block的4px的间距*/
+}
+
+.index-panel-header .btn-item {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin-left: 11px;
+    background: #dedede;
+    border-radius: 50%;
+}
+
+.index-panel .index-panel-header .active {
+    background: #9b9b9b;
+}
+
+
+.index-panel-body {/*公共*/
+    margin-top: 78px;
+}
+
+.index-food-list {
+    overflow: hidden;
+}
+
+.index-food-list ul {
+    width: 1212px;
+}
+
+.index-food-list .food-item {
+    float: left;
+    width: 230px;
+    margin-right: 60px;
+}
+
+.index-food-list .food-item .banner {
+    margin-bottom: 30px;
+    height: 202px;
+}
+
+.index-food-list .food-item .name {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.index-food-list .food-item .price {
+    float: right;
+}
+
+.index-food-list .food-item .star-bar {
+    font-size: 0;
+}
+
+.index-food-list .food-item .star {
+    display: inline-block;
+    width: 12px;
+    height: 13px;
+    margin-right: 5px;
+    background-image:url(../images/index-food-star.png) ;
+    background-repeat: no-repeat;
+}
+
+.index-food-list .food-item .nostar {
+    background-position: 0 -12px;
+}
+
+.index-pics {
+    height :380px;
+    overflow: hidden; 
+    margin-bottom: 200px;
+}
+
+.index-pics .pic-col {
+    float: left;
+}
+
+.index-pics .pic-col-m {
+    width: 353px;
+}
+
+.index-pics .pic-col-s {
+    width: 287px;
+}
+
+.index-pics .pic-col-l {
+    width: 460px;
 }

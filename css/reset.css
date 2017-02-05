@@ -12,6 +12,11 @@ ul, ol, li {
 a {
     text-decoration: none;
     display: block;
+    color: #8f8f8f;
+}
+
+a:hover {
+    color: #cf0606;
 }
 
 img {
